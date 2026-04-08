@@ -17,6 +17,12 @@ class MainActivity3 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main3)
+        findViewById<Button>(R.id.btnSave).setOnClickListener {
+            // Logic to exit without saving
+        }
+        findViewById<Button>(R.id.btnSave1).setOnClickListener {
+            // Logic to trigger the save/QR flow
+        }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
