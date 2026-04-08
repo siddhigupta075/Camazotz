@@ -115,9 +115,7 @@ class Login_Page : AppCompatActivity() {
             val ageText = etAge.text.toString().trim()
             val state = etState.text.toString().trim()
 
-            if (!isVerified){
-                tvStatus.text = "Please verify first"
-                tvStatus.setTextColor(resources.getColor((android.R.color.holo_red_dark)))
+            if (isVerified){
                 return@setOnClickListener
             }
 
