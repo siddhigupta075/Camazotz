@@ -9,109 +9,81 @@
     tools:context=".MainActivity2">
 
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#FF0000"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="0dp">
-
-
-        <TextView
-            android:id="@+id/myStaticTextView"
-            android:layout_width="342dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="29dp"
-            android:layout_marginTop="647dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginBottom="30dp"
-            android:text="Your Notes Are Safe With Us"
-            android:textColor="#FFEB3B"
-            android:textSize="25sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:layout_width="347dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="59dp"
-            android:layout_marginEnd="5dp"
-            android:layout_marginBottom="575dp"
-            android:text="Enter your details for us"
-            android:textColor="#1ADB22"
-            android:textSize="26sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/button1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="333dp"
-            android:layout_marginTop="26dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginBottom="650dp"
-            android:text="enter" />
-
-    </RelativeLayout>
-
-    <EditText
-        android:id="@+id/email"
-        android:layout_width="240dp"
-        android:layout_height="73dp"
-        android:layout_marginBottom="130dp"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textEmailAddress"
-        android:textSize="5sp"
-        app:layout_constraintBottom_toBottomOf="@+id/relativeLayout"
+    <TextView
+        android:id="@+id/myStaticTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="90dp"
+        android:text="Your Notes Are Safe With Us"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:layout_width="347dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+    android:layout_margin="20dp"
+        android:text="Enter your details for us"
+        android:textAlignment="center"
+        android:textColor="#090000"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@+id/pfp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.546"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passworda"
-        app:layout_constraintVertical_bias="0.213" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Enter"
+        app:layout_constraintBottom_toTopOf="@+id/myStaticTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
     <EditText
         android:id="@+id/passworda"
-        android:layout_width="314dp"
-        android:layout_height="129dp"
-        android:layout_marginTop="64dp"
-        android:capitalize="words"
-        android:ems="10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:hint="EMAIL"
-        android:inputType="textPassword"
+        android:inputType="textEmailAddress"
         android:textColor="#201E1E"
-        android:textSize="30sp"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/pfp"
+        app:layout_constraintBottom_toTopOf="@+id/email"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pfp" />
-
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/pfp"
-        android:layout_width="232dp"
-        android:layout_height="139dp"
-        android:layout_marginTop="196dp"
-        android:layout_marginBottom="396dp"
-        app:layout_constraintBottom_toBottomOf="@+id/relativeLayout"
+        android:layout_width="266dp"
+        android:layout_height="177dp"
+        android:layout_margin="20dp"
+        android:layout_marginBottom="152dp"
+        app:layout_constraintBottom_toTopOf="@+id/passworda"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        tools:srcCompat="@drawable/lion" />
+        app:layout_constraintTop_toBottomOf="@+id/pfp"
+        app:srcCompat="@drawable/lion" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/button1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
