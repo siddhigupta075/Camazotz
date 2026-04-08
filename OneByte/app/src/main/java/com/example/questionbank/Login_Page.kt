@@ -30,7 +30,10 @@ class Login_Page : AppCompatActivity() {
         fun resetVerification() {
             isVerified = false
             tvStatus.text = "Not Verified"
-            tvStatus.setTextColor(resources.getColor(android.R.color.holo_green_dark))
+            tvStatus.setTextColor(resources.getColor(android.R.color.holo_red_dark))
+        }
+        fun isNameValid(name: String): Boolean{
+            return name.all { it.isLetter() }
         }
 
         etName.addTextChangedListener{ resetVerification() }
@@ -50,6 +53,12 @@ class Login_Page : AppCompatActivity() {
             if (name.isEmpty()){
                 etName.error = "Please enter your Name"
                 return@setOnClickListener
+            }
+            if (isNameValid(name)){
+                //Succcess
+            }
+            else{
+                etName.error="Name must contain only Letters"
             }
 
             if (email.isEmpty()){
@@ -79,7 +88,7 @@ class Login_Page : AppCompatActivity() {
 
             val age = ageText.toInt()
 
-            if (age<1 || age>120){
+            if (age<17 || age>24){
                 etAge.error = "Please enter a valid Age"
                 return@setOnClickListener
             }
@@ -91,7 +100,7 @@ class Login_Page : AppCompatActivity() {
 
             isVerified=false
             tvStatus.text = "Verified"
-            tvStatus.setTextColor(resources.getColor((android.R.color.holo_red_dark)))
+            tvStatus.setTextColor(resources.getColor((android.R.color.holo_green_dark)))
 //            tvStatus.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baseline_check_circle_24,0,0,0)
         }
 
