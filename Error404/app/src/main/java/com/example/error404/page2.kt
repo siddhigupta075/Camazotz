@@ -13,7 +13,7 @@ class page2 : AppCompatActivity() {
         setContentView(R.layout.page2)
 
         val btnConfirm = findViewById<Button>(R.id.btnConfirm)
-        val btnCancel = findViewById<Button>(R.id.btnCancel)
+//        val btnCancel = findViewById<Button>(R.id.btnCancel)
         val btnAccept = findViewById<Button>(R.id.btnAccept)
         val btnReject = findViewById<Button>(R.id.btnReject)
 
@@ -28,10 +28,10 @@ class page2 : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
-        btnCancel.setOnClickListener {
-            val intent = Intent(this, page4::class.java)
-            startActivity(intent)
-        }
+//        btnCancel.setOnClickListener {
+//            val intent = Intent(this, page4::class.java)
+//            startActivity(intent)
+//        }
         btnAccept.setOnClickListener {
             val intent = Intent(this, page3::class.java)
             startActivity(intent)
