@@ -115,7 +115,7 @@ class Login_Page : AppCompatActivity() {
             val ageText = etAge.text.toString().trim()
             val state = etState.text.toString().trim()
 
-            if (isVerified){
+            if (!isVerified){
                 return@setOnClickListener
             }
 
