@@ -19,8 +19,20 @@ Closes #<!-- issue number -->
 
 ## Checklist
 
-- [ ] I have tested my changes on the iOS Simulator
-- [ ] The project builds without errors (`Cmd+B`)
-- [ ] My code follows the existing code style
-- [ ] I have not committed signing/team configuration changes
-- [ ] I have linked the related issue above
+[ ] Rename incorrect or misspelled fields in model files
+[ ] Search entire project for old references and update them
+[ ] Verify loading / state UI handles success, error, and empty states
+[ ] Ensure API response mapping matches updated model fields
+[ ] Check null / optional handling for failed responses
+[ ] Test loading state UI behavior
+[ ] Test error state UI behavior
+[ ] Test empty state UI behavior
+[ ] Run app and verify no crashes on navigation
+[ ] Confirm build succeeds on both debug and release
+
+Optional but Recommended:
+
+[ ] Add logging for failure states
+[ ] Add unit tests for model parsing
+[ ] Review naming consistency across project
+
