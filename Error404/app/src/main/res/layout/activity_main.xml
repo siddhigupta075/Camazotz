@@ -12,29 +12,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/bg">
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnCancel"
-            android:layout_width="146dp"
-            android:layout_height="56dp"
-            android:layout_marginStart="80dp"
-            android:layout_marginTop="456dp"
-            android:background="@color/violet"
-            android:fontFamily="sans-serif-medium"
-            android:padding="18dp"
-            android:text="Cancel"
-            android:textAlignment="center"
-            android:textAllCaps="false"
-            android:textColor="@android:color/black"
-            android:textSize="25sp"
-            app:layout_constraintBottom_toBottomOf="@+id/btnSave"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/btnSave"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/cl_profile_card_container"
-            app:layout_constraintVertical_bias="0.0"
-            tools:ignore="HardcodedText,VisualLintButtonSize" />
-
+        <!-- TITLE -->
         <TextView
             android:id="@+id/tv_title"
             android:layout_width="wrap_content"
@@ -42,55 +20,55 @@
             android:layout_marginTop="25dp"
             android:background="@color/black"
             android:text="Profile Setup"
-            android:textColor="@color/red"
+            android:textColor="@color/grey"
             android:textSize="37sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <TextView
             android:id="@+id/tv_subtitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="144dp"
+            android:layout_height="37dp"
             android:layout_marginTop="10dp"
             android:background="@color/black"
-            android:paddingBottom="20dp"
-            android:text="Welcome!!"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="@+id/tv_title"
-            app:layout_constraintStart_toStartOf="@+id/tv_title"
-            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+            android:text="WELCOME!!"
+            android:textAlignment="center"
+            android:textColor="@color/grey"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="@id/tv_title"
+            app:layout_constraintStart_toStartOf="@id/tv_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_title" />
 
+        <!-- CARD -->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cl_profile_card_container"
-            android:layout_width="364dp"
-            android:layout_height="464dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="24dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
             android:background="@color/grey"
-            android:paddingHorizontal="20dp"
-            android:paddingTop="40dp"
-            android:paddingBottom="15dp"
+            android:padding="20dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_subtitle">
+            app:layout_constraintTop_toBottomOf="@id/tv_subtitle">
 
-            <!-- Circular profile image with placeholder -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/profileImage"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/img"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tv_label_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:drawablePadding="10dp"
-                android:padding="5dp"
-                android:text="назва"
+                android:text="NAME"
                 android:textColor="@color/black"
-                android:textSize="29sp"
+                android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/profileImage" />
@@ -100,126 +78,72 @@
                 android:layout_width="0dp"
                 android:layout_height="56dp"
                 android:layout_marginTop="8dp"
-                android:background="@drawable/bg"
-                android:hint="faka i-anme yakho epheleleyo apha"
-                android:inputType="textPersonName"
-                android:paddingHorizontal="16dp"
-                android:rotation="37"
-                android:textColor="@color/red"
-                android:textColorHint="@color/black"
+                android:hint="Enter Full Name"
+                android:textColor="@color/black"
+                android:rotation="0"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_label_name" />
+                app:layout_constraintTop_toBottomOf="@id/tv_label_name" />
 
             <TextView
                 android:id="@+id/tv_label_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:drawablePadding="10dp"
-                android:padding="5dp"
-                android:text="電子メール"
-                android:rotation="289"
+                android:rotation="0"
+                android:text="EMAIL"
                 android:textColor="@color/black"
-                android:textSize="20dp"
+                android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/etName"
-                tools:ignore="HardcodedText" />
+                app:layout_constraintTop_toBottomOf="@id/etName" />
 
             <EditText
                 android:id="@+id/etEmail"
                 android:layout_width="0dp"
                 android:layout_height="56dp"
                 android:layout_marginTop="8dp"
-                android:autofillHints="no"
-                android:background="@drawable/bg"
-                android:hint="e.g., mail@example.com"
-                android:inputType="textEmailAddress"
-                android:padding="18dp"
-                android:rotation="68"
-                android:paddingHorizontal="16dp"
-                android:textColor="@color/red"
-                android:textColorHint="@color/black"
-                android:textSize="18dp"
+                android:hint="mail@example.com"
+                android:textColor="@color/black"
+                android:rotation="0"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_label_email"
-                tools:ignore="HardcodedText,VisualLintTextFieldSize" />
+                app:layout_constraintTop_toBottomOf="@id/tv_label_email" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnReject"
-            android:layout_width="118dp"
-            android:layout_height="65dp"
-            android:layout_marginTop="500dp"
-            android:background="@color/yellow"
-            android:fontFamily="sans-serif-medium"
-            android:padding="18dp"
-            android:text="Reject"
-            android:textAlignment="center"
-            android:textAllCaps="false"
-            android:textColor="@android:color/black"
-            android:textSize="25sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/btnSave"
-            app:layout_constraintHorizontal_bias="0.5"
+            android:id="@+id/btnAccept"
+            android:layout_width="197dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="361dp"
+            android:background="#2C9D06"
+            android:text="Accept"
+            app:layout_constraintEnd_toStartOf="@+id/btnReject"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.5"
-            tools:ignore="HardcodedText,NotSibling,VisualLintButtonSize" />
+            app:layout_constraintTop_toTopOf="@+id/cl_profile_card_container" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnAccept"
-            android:layout_width="0dp"
-            android:layout_height="64dp"
-            android:layout_marginTop="52dp"
-            android:background="@color/green"
-            android:fontFamily="sans-serif-medium"
-            android:padding="18dp"
-            android:text="Accept"
-            android:textAlignment="center"
-            android:textAllCaps="false"
-            android:textColor="@android:color/black"
-            android:textSize="25sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.5"
-            tools:ignore="HardcodedText,MissingConstraints,VisualLintButtonSize"
-            tools:layout_editor_absoluteX="296dp" />
+            android:id="@+id/btnReject"
+            android:layout_width="190dp"
+            android:layout_height="60dp"
+            android:layout_margin="8dp"
+            android:background="@color/red"
+            android:text="Reject"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cl_profile_card_container" />
+
+        <!-- BUTTON ROW 2 -->
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnConfirm"
-            android:layout_width="189dp"
-            android:layout_height="64dp"
-            android:layout_marginTop="4dp"
-            android:background="@color/blue"
-            android:fontFamily="sans-serif-medium"
-            android:padding="18dp"
+            android:layout_width="403dp"
+            android:layout_height="66dp"
+            android:background="#069D8E"
             android:text="Confirm"
-            android:textAlignment="center"
-            android:textAllCaps="false"
-            android:textColor="#4DB6AC"
-            android:textSize="25sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.481"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.924"
-            tools:ignore="HardcodedText,VisualLintButtonSize" />
+            app:layout_constraintTop_toBottomOf="@+id/cl_profile_card_container" />
 
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/profileImage"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/img"
-            tools:layout_editor_absoluteX="251dp"
-            tools:layout_editor_absoluteY="44dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
