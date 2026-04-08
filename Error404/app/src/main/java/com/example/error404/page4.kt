@@ -1,3 +1,5 @@
+//24th line unnecessary
+
 package com.example.error404
 
 import android.annotation.SuppressLint
@@ -19,7 +21,7 @@ class page4 : AppCompatActivity() {
         val btnAccept = findViewById<Button>(R.id.btnAccept)
         val btnReject = findViewById<Button>(R.id.btnReject)
 
-        val btnAge = findViewById<TextView>(R.id.tv_label_name)
+//        val btnAge = findViewById<TextView>(R.id.tv_label_name)
         val btnEmail = findViewById<TextView>(R.id.tv_label_email)
 
         btnConfirm.setOnClickListener {
@@ -45,11 +47,9 @@ class page4 : AppCompatActivity() {
             clickCount++ // Increment counter on each click
 
             if (clickCount == 5) {
-                // Define the target page (SecondActivity)
                 val intent = Intent(this, Game1::class.java)
                 startActivity(intent) // Navigate to the next page
 
-                // Optional: Reset count if you don't want it to trigger again immediately
                 clickCount = 0
             }
         }
