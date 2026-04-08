@@ -9,62 +9,64 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/main"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bg">
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/tv_subtitle"
-            android:layout_width="166dp"
-            android:layout_height="53dp"
-            android:layout_marginTop="16dp"
+            android:layout_width="185dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="4dp"
             android:background="@color/black"
             android:gravity="center"
             android:paddingBottom="20dp"
             android:text="Welcome!!"
             android:textColor="@color/white"
-            android:textSize="31sp"
+            android:textSize="35sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_title" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cl_profile_card_container"
-            android:layout_width="372dp"
-            android:layout_height="404dp"
+            android:layout_width="371dp"
+            android:layout_height="417dp"
             android:background="@color/grey"
             android:paddingHorizontal="20dp"
             android:paddingTop="40dp"
             android:paddingBottom="15dp"
             android:rotation="0"
-            tools:layout_editor_absoluteX="23dp"
-            tools:layout_editor_absoluteY="133dp">
+            tools:layout_editor_absoluteX="24dp"
+            tools:layout_editor_absoluteY="150dp"
+            tools:ignore="MissingConstraints">
 
-            <!-- Circular profile image with placeholder -->
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/profileImage"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_width="99dp"
+                android:layout_height="93dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/img"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/tv_label_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:drawablePadding="10dp"
-                android:padding="5dp"
-                android:text="etæ"
-                android:textColor="@color/black"
-                android:textSize="29sp"
-                android:textStyle="bold"
-                tools:layout_editor_absoluteX="4dp"
-                tools:layout_editor_absoluteY="92dp" />
-
             <EditText
                 android:id="@+id/etName"
+                android:layout_width="332dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="6dp"
+                android:hint="Enter Name"
+                android:inputType="textPersonName"
+                android:paddingHorizontal="16dp"
+                android:textColor="@color/red"
+                android:textColorHint="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profileImage" />
+
+            <EditText
+                android:id="@+id/etAge"
                 android:layout_width="332dp"
                 android:layout_height="56dp"
                 android:hint="Enter Age"
@@ -72,98 +74,68 @@
                 android:paddingHorizontal="16dp"
                 android:textColor="@color/red"
                 android:textColorHint="@color/black"
-                tools:layout_editor_absoluteX="-4dp"
-                tools:layout_editor_absoluteY="160dp" />
-
-            <TextView
-                android:id="@+id/tv_label_email"
-                android:layout_width="294dp"
-                android:layout_height="52dp"
-                android:drawablePadding="10dp"
-                android:padding="2dp"
-                android:text="ब्रो हमरा खातिर डांस करीं"
-                android:textColor="@color/black"
-                android:textSize="27dp"
-                android:textStyle="bold"
-                tools:ignore="HardcodedText"
-                tools:layout_editor_absoluteX="2dp"
-                tools:layout_editor_absoluteY="228dp" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnCancel"
-                android:layout_width="0dp"
-                android:layout_height="64dp"
-                android:background="@color/violet"
-                android:fontFamily="sans-serif-medium"
-                android:padding="18dp"
-                android:text="Cancel"
-                android:textAlignment="center"
-                android:textAllCaps="false"
-                android:textColor="@android:color/black"
-                android:textSize="25sp"
-                tools:ignore="HardcodedText,MissingConstraints,VisualLintButtonSize"
-                tools:layout_editor_absoluteX="222dp"
-                tools:layout_editor_absoluteY="301dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="162dp"
+                tools:ignore="MissingConstraints" />
 
             <EditText
-                android:id="@+id/etEmail"
-                android:layout_width="0dp"
+                android:id="@+id/tv_label_email"
+                android:layout_width="332dp"
                 android:layout_height="56dp"
-                android:autofillHints="no"
-                android:hint="Contact Number"
-                android:inputType="phone"
-                android:padding="18dp"
+                android:hint="Enter Email"
+                android:inputType="textEmailAddress"
                 android:paddingHorizontal="16dp"
-                android:rotationX="0"
                 android:textColor="@color/red"
                 android:textColorHint="@color/black"
-                android:textSize="18dp"
-                tools:ignore="HardcodedText,VisualLintTextFieldSize"
-                tools:layout_editor_absoluteX="35dp"
-                tools:layout_editor_absoluteY="311dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="289dp"
+                tools:ignore="MissingConstraints" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnConfirm"
-                android:layout_width="411dp"
-                android:layout_height="64dp"
-                android:background="@color/blue"
-                android:fontFamily="sans-serif-medium"
-                android:padding="18dp"
-                android:text="balimacɛ ye yoyu naloman ye"
-                android:textAlignment="center"
-                android:textAllCaps="false"
-                android:textColor="#4DB6AC"
-                android:textSize="25sp"
-                tools:ignore="HardcodedText,MissingConstraints,VisualLintButtonSize"
-                tools:layout_editor_absoluteX="22dp"
-                tools:layout_editor_absoluteY="-6dp" />
+            <EditText
+                android:id="@+id/num"
+                android:layout_width="332dp"
+                android:layout_height="56dp"
+                android:hint="Phone Number"
+                android:inputType="textEmailAddress"
+                android:paddingHorizontal="16dp"
+                android:textColor="@color/red"
+                android:textColorHint="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="226dp"
+                tools:ignore="MissingConstraints" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnReject"
-            android:layout_width="256dp"
-            android:layout_height="79dp"
-            android:background="@color/yellow"
+            android:layout_width="186dp"
+            android:layout_height="67dp"
+            android:background="@color/red"
             android:fontFamily="sans-serif-medium"
             android:padding="18dp"
-            android:text="I will not give"
+            android:text="Reject"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="@android:color/black"
             android:textSize="25sp"
-            tools:ignore="HardcodedText,VisualLintButtonSize"
-            tools:layout_editor_absoluteX="77dp"
-            tools:layout_editor_absoluteY="636dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="HardcodedText,MissingConstraints,VisualLintButtonSize"
+            tools:layout_editor_absoluteY="577dp" />
 
         <TextView
             android:id="@+id/tv_title"
-            android:layout_width="229dp"
-            android:layout_height="58dp"
+            android:layout_width="236dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="16dp"
             android:background="@color/black"
             android:rotation="0"
             android:text="Profile Setup"
-            android:textColor="@color/red"
+            android:gravity="center"
+            android:textColor="@color/white"
             android:textSize="37sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -172,20 +144,57 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnAccept"
-            android:layout_width="0dp"
-            android:layout_height="64dp"
-            android:background="@color/green"
+            android:layout_width="216dp"
+            android:layout_height="65dp"
+            android:background="#6CD305"
             android:fontFamily="sans-serif-medium"
             android:padding="18dp"
             android:rotation="0"
             android:rotationX="0"
-            android:text="Step by step, I am learning slowly"
+            android:text="Accept"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="@android:color/black"
-            android:textSize="18sp"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toStartOf="@+id/btnReject"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
             tools:ignore="HardcodedText,MissingConstraints,VisualLintButtonSize"
-            tools:layout_editor_absoluteX="34dp"
-            tools:layout_editor_absoluteY="566dp" />
+            tools:layout_editor_absoluteY="577dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnConfirm"
+            android:layout_width="186dp"
+            android:layout_height="69dp"
+            android:background="@color/blue"
+            android:fontFamily="sans-serif-medium"
+            android:padding="18dp"
+            android:text="Confirm"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnReject"
+            tools:ignore="HardcodedText,MissingConstraints,VisualLintButtonSize" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCancel"
+            android:layout_width="210dp"
+            android:layout_height="71dp"
+            android:background="@color/violet"
+            android:fontFamily="sans-serif-medium"
+            android:padding="18dp"
+            android:text="Cancel"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnConfirm"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnAccept"
+            tools:ignore="HardcodedText,MissingConstraints,VisualLintButtonSize" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
