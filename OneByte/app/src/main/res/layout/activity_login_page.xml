@@ -42,7 +42,7 @@
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nestedScrollView"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/materialToolbar"
@@ -50,7 +50,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:padding="20dp">
 
         <TextView
@@ -99,11 +99,11 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/outerCardView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginTop="-65dp"
-            app:cardBackgroundColor="?attr/colorSurface"
             app:cardCornerRadius="15dp"
             app:cardElevation="2dp"
+            app:cardBackgroundColor="?attr/colorSurface"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -141,7 +141,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:hint="Enter your name"
-                    android:textColorHint="attr/colorOnSurfaceVariant"
+                    android:textColorHint="?attr/colorOnSurfaceVariant"
                     app:boxBackgroundColor="?attr/colorSurfaceVariant"
                     app:boxCornerRadiusBottomEnd="12dp"
                     app:boxCornerRadiusBottomStart="12dp"
@@ -187,7 +187,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:hint="Enter your Email"
-                    android:textColorHint="attr/colorOnSurfaceVariant"
+                    android:textColorHint="?attr/colorOnSurfaceVariant"
                     app:boxBackgroundColor="?attr/colorSurfaceVariant"
                     app:boxCornerRadiusBottomEnd="12dp"
                     app:boxCornerRadiusBottomStart="12dp"
@@ -234,7 +234,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:hint="Enter your Phone Number"
-                    android:textColorHint="attr/colorOnSurfaceVariant"
+                    android:textColorHint="?attr/colorOnSurfaceVariant"
                     app:boxBackgroundColor="?attr/colorSurfaceVariant"
                     app:boxCornerRadiusBottomEnd="12dp"
                     app:boxCornerRadiusBottomStart="12dp"
@@ -280,7 +280,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:hint="Enter your Age"
-                    android:textColorHint="attr/colorOnSurfaceVariant"
+                    android:textColorHint="?attr/colorOnSurfaceVariant"
                     app:boxBackgroundColor="?attr/colorSurfaceVariant"
                     app:boxCornerRadiusBottomEnd="12dp"
                     app:boxCornerRadiusBottomStart="12dp"
@@ -326,7 +326,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:hint="Enter your State"
-                    android:textColorHint="attr/colorOnSurfaceVariant"
+                    android:textColorHint="?attr/colorOnSurfaceVariant"
                     app:boxBackgroundColor="?attr/colorSurfaceVariant"
                     app:boxCornerRadiusBottomEnd="12dp"
                     app:boxCornerRadiusBottomStart="12dp"
@@ -425,7 +425,6 @@
             android:id="@+id/btnContinue"
             android:layout_width="wrap_content"
             android:layout_height="56dp"
-            android:layout_marginTop="-28dp"
             android:backgroundTint="?attr/colorPrimary"
             android:stateListAnimator="@null"
             android:text="Continue"
@@ -436,12 +435,10 @@
             app:cornerRadius="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.53"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/outerCardView"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintTop_toBottomOf="@+id/outerCardView" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 
 
