@@ -63,7 +63,7 @@ class MainActivity_Constraint : AppCompatActivity() {
 
                 builder.setMessage("Do you want to logout?")
 
-                builder.setNegativeButton("No") { dialog, which ->
+                builder.setNegativeButton("Yes") { dialog, which ->
                     editor.apply{
                         putString("name","")
                         putString("email","")
