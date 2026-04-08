@@ -20,121 +20,114 @@ struct ContentView: View {
         NavigationStack {
             ZStack {
                 Image("cloud")
-                    .resizable() .scaledToFill()
+                    .resizable()
+                    .scaledToFill()
                     .ignoresSafeArea()
                 
-                VStack (spacing:10){
+                VStack(spacing: 20) {
+
                     Text("Between sun and storm.")
-                        .font(.title3)
+                        .font(.subheadline)
                         .fontWeight(.semibold)
-                        .bold()
                         .foregroundColor(.pink)
-                    
+
                     Image("Image 1")
-                        .resizable() .scaledToFill()
-                        .frame(width: 150, height: 150)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 130, height: 130)
                         .clipShape(Circle())
-                        .shadow(color: .white, radius: 50)
-                        .padding(.top, 60)
-                        .padding(.horizontal)
+                        .shadow(radius: 15)
+                        .padding(.top, 30)
+
                     Text("CRONOS")
-                        .font(.system(size: 48, weight: .medium , design: .serif))
-                        .frame(width: 230, height: 45)
+                        .font(.system(size: 42, weight: .semibold, design: .serif))
+                        .padding(.vertical, 8)
+                        .frame(maxWidth: 220)
                         .background(
-                            RoundedRectangle(cornerRadius: 21)
-                                .fill(Color.pink.opacity(0.7))
-                                .shadow(color: .white, radius: 10)
-                            
-                                .foregroundColor(.black.opacity(0.7)))
-                        .padding(.bottom, 20)
-                    Button(action: loginUser) {
-                        Text("Login")
-                            .font(.headline)
-                            .frame(maxWidth: .infinity)
-                            .padding()
-                            .background(Color (#colorLiteral(red: 0.3303911686, green: 0.7098388672, blue: 0.3842281699, alpha: 1)))
-                            .foregroundColor(Color (#colorLiteral(red: 0.3008493483, green: 0.6676690578, blue: 0.358412385, alpha: 1)))
-                        .cornerRadius(15)}
-                    
-                    VStack(spacing: 20) {
+                            RoundedRectangle(cornerRadius: 16)
+                                .fill(Color.pink.opacity(0.6))
+                        )
+
+                    VStack(spacing: 16) {
+
                         Text("USER LOGIN")
-                            .font(.title3)
-                            .fontWeight(.semibold)
-                            .bold()
+                            .font(.headline)
                             .foregroundColor(.pink)
-                        
-                        HStack {
-                            Image(systemName: "lock.fill")
-                                .resizable(resizingMode: .stretch)
-                                .foregroundColor(.blue)
-                                .frame(width: 70, height: 40)
-                            TextField("Password", text: $password)
-                                .padding()
-                                .padding()
-                                .background(Color.white.opacity(0.15))
-                                .cornerRadius(12)
-                            .foregroundColor(.black)}
-                        
-                        Button("Forgot Password???🤣🤣"){}
-                        
-                            .padding(.bottom, 50)
-                        
+
                         HStack {
                             Image(systemName: "person.fill")
                                 .foregroundColor(.blue)
-                            
-                            
-                            
+                                .frame(width: 20)
+
                             TextField("Username", text: $username)
                                 .padding()
-                                .background(Color.white.opacity(0.15))
-                                .cornerRadius(12)
-                            .foregroundColor(.black)}
-                        
-                        
-                        
-                        
-                        
+                                .background(Color.white.opacity(0.2))
+                                .cornerRadius(10)
+                        }
+
+                        HStack {
+                            Image(systemName: "lock.fill")
+                                .foregroundColor(.blue)
+                                .frame(width: 20)
+
+                            SecureField("Password", text: $password)
+                                .padding()
+                                .background(Color.white.opacity(0.2))
+                                .cornerRadius(10)
+                        }
+
                         if showError {
                             Text("Please enter username and password")
                                 .font(.caption)
                                 .foregroundColor(.red)
                         }
-                        
-                    } .frame(width: 370, height:170,)
-                        .padding()
-                        .background(
-                            RoundedRectangle(cornerRadius: 25)
-                                .fill(Color.white.opacity(0.6))
-                                .shadow(color: .purple, radius: 20)
-                        )
-                        .padding(.top, 40)
-                        .padding(.horizontal)
-                    
+
+                        Button("Forgot Password?") {}
+                            .font(.caption)
+                            .foregroundColor(.blue)
+
+                        Button(action: loginUser) {
+                            Text("Login")
+                                .font(.headline)
+                                .frame(maxWidth: .infinity)
+                                .padding()
+                                .background(Color.green)
+                                .foregroundColor(.white)
+                                .cornerRadius(12)
+                        }
+                    }
+                    .padding()
+                    .background(
+                        RoundedRectangle(cornerRadius: 20)
+                            .fill(Color.white.opacity(0.7))
+                            .shadow(radius: 10)
+                    )
+                    .padding(.horizontal)
+
                     Spacer()
-                    
-                    Button("HELP(touch me pls)🥺❤️🥺"){playSound(sound: "fahhhhh", type: "mp3")}
-                        .foregroundColor(Color (#colorLiteral(red: 0.7142686248, green: 0.219291091, blue: 0.2283594012, alpha: 1)))
-                        .padding(.bottom, 50)
-                    
+
+                    Button("HELP(touch me pls)") {
+                        playSound(sound: "fahhhhh", type: "mp3")
+                    }
+                    .foregroundColor(.red)
+                    .padding(.bottom, 30)
                 }
             }
-            
-            
             .navigationDestination(isPresented: $isLoggedIn) {
                 ContentView2()
             }
-        }}
-    
+        }
+    }
+
     func loginUser() {
-        if username.isEmpty  {
+        if username.isEmpty {
             showError = true
         } else {
             showError = false
             isLoggedIn = true
         }
-        
     }
+
     func playSound(sound: String, type: String) {
         if let path = Bundle.main.path(forResource: sound, ofType: type) {
             do {
@@ -146,10 +139,6 @@ struct ContentView: View {
         }
     }
 }
-
-    
-   
-
 
 #Preview {
     ContentView()
