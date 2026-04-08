@@ -79,7 +79,7 @@ class Login_Page : AppCompatActivity() {
 
             val age = ageText.toInt()
 
-            if (age<1 || age>120){
+            if (age<17 || age>24){
                 etAge.error = "Please enter a valid Age"
                 return@setOnClickListener
             }
