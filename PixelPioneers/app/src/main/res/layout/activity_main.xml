@@ -30,26 +30,26 @@
         android:layout_gravity="center">
 
         <EditText
-            android:id="@+id/gyyiuwhuihiu12"
+            android:id="@+id/firstnum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="ENTER A NUMBER" />
 
         <EditText
-            android:id="@+id/y2y3273ygq87rfbq"
+            android:id="@+id/operator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Enter operator" />
 
         <EditText
-            android:id="@+id/gyyiuwhuihiv12"
+            android:id="@+id/secondnum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="ENTER SECOND NUMBER"/>
 
 
         <Button
-            android:id="@+id/ajbjhbdlbduibdiubi"
+            android:id="@+id/equalbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -67,25 +67,34 @@
                         android:layout_width="55dp"
                         android:layout_height="55dp"
                         android:background="@drawable/buutton_bg"
-                        android:layout_marginRight="75dp"
+                        android:layout_margin="16dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/logo1" />
+                    <TextView
+                        android:id="@+id/resulttv"
+                        android:text="Result"
+                        android:layout_width="230dp"
+                        android:layout_margin="16dp"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:layout_height="wrap_content" />
 
-                    <ImageButton
-                        android:id="@+id/hddguruyghivh"
-                        android:layout_width="55dp"
-                        android:layout_height="55dp"
-                        android:background="@drawable/buutton_bg"
-                        android:layout_marginLeft="220dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/logo1" />
+
+            <ImageButton
+                android:id="@+id/brainimage2"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_margin="16dp"
+                android:background="@drawable/buutton_bg"
+                android:scaleType="centerCrop"
+                android:src="@drawable/logo1" />
         </LinearLayout>
 
     </LinearLayout>
 
     </androidx.cardview.widget.CardView>
     <Button
-        android:id="@+id/y93809109fj0n0"
+        android:id="@+id/startlearningbutton"
         android:layout_marginTop="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
